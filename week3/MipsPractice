@@ -1,0 +1,74 @@
+#与c不同的是，MIPS　汇编会真正让你体验到用　goto　编程的快感与逻辑混乱的感觉
+＃特别之处: 
+#1. 需要手动跳转，
+
+
+
+#if
+beq $s3 $s4 TRUE #if
+sub $s0 $s1 $s2 #else if
+j END
+
+TRUE:
+add $s0 $s1 $s2
+
+END:
+
+
+# 位运算pratice
+LOOP:
+sll $t0 $s3 2 # i*4
+addu $t1 $t0 $s5
+lw $t1 0($t1)
+addu $s1 $s1 $t1
+addu $s3 $s3  $s4
+bne $s3 $$s2 LOOP
+
+#if(g < h)goto Less;
+slt $t0 $s0 $s1
+bne $t0 $zero LESS
+LESS:
+
+#if(g >= h)goto Less;
+
+slt $t0 $s0 $s1
+beq $t0 $zero LESS #if a >= b, goto LOOP
+#do if a < b
+LOOP:
+
+
+#if(g > h)goto Less;
+slt $t0 $s0 $s1
+beq $s0 $s1
+beq $t0 $zero LESS
+LESS:
+
+#if(k==0) f=i+j;
+#else if(k==1) f=g+h;
+#else if(k==2) f=g–h;
+#else if(k==3) f=i–j;
+#f:$s0, g:$s1, h:$s2,
+#i:$s3, j:$s4, k:$s5
+
+beq $s5 $zero case_k_0
+beq $s5 $zero case_k_1
+beq $s5 $zero case_k_2
+beq $s5 $zero case_k_3
+j EXIT
+
+case_k_0:
+add  $s0 $s3 $s4
+j EXIT
+
+case_k_1:
+add  $s0 $s1 $s2
+j EXIT
+
+case_k_2:
+sub  $s0 $s1 $s2
+j EXIT
+
+case_k_3:
+sub  $s0 $s3 $s4
+EXIT:
+
