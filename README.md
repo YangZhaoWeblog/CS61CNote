@@ -2,7 +2,7 @@
      学习课程为 Cs61c Spring 2014(因为c语言部分相对较少)
      学习此课程后将习得:
      1. c 语言(spring 2014 中对ｃ的教学相对较少)以及 GDB,git,valgringd 等工具
-     2. mips32 汇编语言(2019 cs61c 讲的是 RISC-V 汇编)
+     2. mips32 汇编语言(2019 cs61c 讲的是 RISC-V 汇编)-熟练转换ｃ语言代码为 Mips 汇编
 
 ## 第1周
 > 计算机中数值的表示及其转换
@@ -183,4 +183,18 @@ https://www.ibm.com/developerworks/cn/linux/l-cn-valgrind/index.html
 3. Cache 相关的计算
 
 ### READING
+略
+
+### Section
+这里我自己用 Mips 汇编写了一个插入排序，代码地址为: 
+
+### Lab
+熟练使用　MIps 写过程,以及压栈入栈等等`
+
+---
+
+# 第六周 
+### Lecture Topic
+关于浮点数的详细介绍:
+
 
