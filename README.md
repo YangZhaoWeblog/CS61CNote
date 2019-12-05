@@ -1,5 +1,5 @@
 # CS61c  回忆笔记
-     学习课程为 Cs61c Spring 2014(因为c语言部分相对较少)
+     学习课程为 为Cs61c Spring 2014(因为c语言部分相对较少)
      学习此课程后将习得:
      1. c 语言(spring 2014 中对ｃ的教学相对较少)以及 GDB,git,valgringd 等工具
      2. mips32 汇编语言(2019 cs61c 讲的是 RISC-V 汇编)-熟练转换ｃ语言代码为 Mips 汇编
@@ -190,11 +190,29 @@ https://www.ibm.com/developerworks/cn/linux/l-cn-valgrind/index.html
 
 ### Lab
 熟练使用　MIps 写过程,以及压栈入栈等等`
+`
+这里实现了 map , 同时引入新指令: jalr, 只比 jal 多了一个功能: 跳转到一个寄存器所存储的函数地址。
+
+*new tips*: 
+1. 将mips 中用到的每个函数，即使是 printf 特化成一个过程，而不是挤在一起
+2. 无论 process 是否 leaf process, 都需要在刚进入其的时候压栈 $ra, 返回前出栈 $ra.
+
 
 ---
 
 # 第六周 
 ### Lecture Topic
 关于浮点数的详细介绍:
+### 编译、链接、装载
+### Lab
+> Cache 对编程效率的提升
+eg: 循环展开、矩阵分块优化(不能同时读或同时写)、有限跨行访问
 
+---
+# 第七周 
+> 云计算与 Intel SIMD
 
+# 第八周 
+> 线程并行
+
+# 第九周 
