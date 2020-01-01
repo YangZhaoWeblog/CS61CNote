@@ -17,6 +17,7 @@ void transpose( int n, int blocksize, int *dst, int *src )
 
     //我们要兼容的处理奇数块
     //确保分的每一个小步骤里操作的数不超过 16个int, 2000*2000 ==> 4*4 == 我们将小步骤执行 500 次即可
+#pragma omp simd
     for (int j = 0; j < n; j += blocksize)
     {
         for (int i = 0; i < n; i += blocksize)
@@ -26,7 +27,7 @@ void transpose( int n, int blocksize, int *dst, int *src )
             {
                 for (int l = j; l < j + blocksize; ++l)
                 {
-                    dst[k + l * n] = src[l + k * n];
+                  dst[k + l * n] = src[l + k * n];
                 }
             }
         }

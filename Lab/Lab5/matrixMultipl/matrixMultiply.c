@@ -16,6 +16,12 @@
 //i为行，j为列,k为列里面的偏移量
 //3 2 1   2 3 4
 //1 2 3   7 4 0
+//
+//cache  cpu-cache-mainmemory
+// 1 1 1 1
+// 1 1 1 1
+// 1 1 1 1
+// 1 1 1 1
 
 void multMat1( int n, float *A, float *B, float *C ) {
     int i,j,k;

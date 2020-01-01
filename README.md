@@ -3,6 +3,13 @@
      学习此课程后将习得:
      1. c 语言(spring 2014 中对ｃ的教学相对较少)以及 GDB,git,valgringd 等工具
      2. mips32 汇编语言(2019 cs61c 讲的是 RISC-V 汇编)-熟练转换ｃ语言代码为 Mips 汇编
+ ---
+ 更新
+ 1. 经过慎重考虑(时间原因, 等什么时候闲了，有时间了再回来做)，决定略过　分布式计算(Map Reduce)的部分。
+ 2. 汇编与反汇编不太熟悉.
+ 3. 多核CPU 中的 Cache 一致协议略过，因为ppt上所能体现的太少了。
+ 4. ThreadLevelParallelism OpenMp 部分略过(用时再看)
+ 5. Intel SIMD 部分，略过(AVX)
 
 ## 第1周
 > 计算机中数值的表示及其转换
